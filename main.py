@@ -37,7 +37,7 @@ def countdown(total_seconds):
     tomato_canvas.itemconfig(timer_text, text = f'{timer_minutes}:{0 if timer_seconds < 10 else ""}{timer_seconds}')
     if total_seconds > 0:
         global timer
-        timer = window.after(1, countdown, total_seconds - 1)
+        timer = window.after(1000, countdown, total_seconds - 1)
     else:
         start_timer()
 
