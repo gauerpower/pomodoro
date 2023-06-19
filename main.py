@@ -15,22 +15,20 @@ def reset():
 
 def start_timer():
     global reps
+    reps += 1
     if reps % 8 == 0:
         title['text'] = 'Long Break Timer'
         title['fg'] = "#e2979c"
         checkmark_area['text'] += '✓'
-        reps += 1
         countdown(1200)
     elif reps % 2 == 0:
         title['text'] = 'Short Break Timer'
         title['fg'] = "#e7305b"
         checkmark_area['text'] += '✓'
-        reps += 1
         countdown(300)
     else:
         title['text'] = 'Work Timer'
         title['fg'] = "#9bdeac"
-        reps += 1
         countdown(1500)
 
 def countdown(total_seconds):
